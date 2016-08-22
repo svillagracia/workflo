@@ -1,0 +1,31 @@
+{
+  "name": "workflo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm run lint:server && npm run lint:client",
+    "lint:client": "echo '=> linting client code' && eslint public/js/app/**/*.js",
+    "lint:server": "echo '=> linting server code' && eslint index.js controllers/*.js",
+    "minify:js": "echo '=> minify:js' && uglifyjs public/src/js/app/**/*.js -o public/bld/js/main.min.js",
+    "test": "echo '=> testing' && mocha test/",
+    "start": "nodemon"
+  },
+  "author": "panda.codes",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "clean-css": "^3.4.19",
+    "express": "^4.14.0",
+    "http-server": "^0.9.0",
+    "jsonwebtoken": "^7.1.9",
+    "pg": "^6.1.0",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.74.0",
+    "sequelize": "^3.24.1",
+    "sequelize-cli": "^2.4.0",
+    "uglify-js": "^2.7.3",
+    "watch": "^0.19.2"
+  }
+}
